@@ -7,3 +7,4 @@ tqdm
 geopandas
 shapely
 numba
+rpy2

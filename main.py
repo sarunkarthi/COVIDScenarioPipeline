@@ -2,16 +2,16 @@ import numpy as np
 import pandas as pd
 import datetime, time, multiprocessing, itertools, sys
 import matplotlib.pyplot as plt
-from COVIDScenarioPipeline.SEIR import seir, setup, results
+from SEIR import seir, setup, results
 
 class SomeStateSpatialSetup():
     """
         Setup for Maryland at the county scale.
     """
     def __init__(self):
-        folder = 'somestate/'
-        self.data = pd.read_csv(f'data/{folder}geodata.csv')
-        self.mobility = np.loadtxt(f'data/{folder}mobility.txt')
+        folder = 'west-coast/'
+        self.data = pd.read_csv(f'data/{folder}geodataNEW.csv')
+        self.mobility = np.loadtxt(f'data/{folder}mobilityNEW.txt')
         self.popnodes = self.data['pop2010'].to_numpy()
         self.nnodes = len(self.data)
         #self.counties_shp = gpd.read_file(f'data/{folder}somestate-counties-shp/somestate.shp')
