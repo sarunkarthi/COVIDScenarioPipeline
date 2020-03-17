@@ -19,6 +19,10 @@ class SomeStateSpatialSetup():
 
 if __name__ == '__main__':          # For windows thread
 
+    nsim = int(sys.argv[1])
+    some_geo_id = float(sys.argv[2])
+    some_geo_id1 = float(sys.argv[3])
+
     s = setup.Setup(setup_name = 'mid-SomeState',
                     spatial_setup = SomeStateSpatialSetup(),
                     nsim =  int( sys.argv[1]),
@@ -29,7 +33,7 @@ if __name__ == '__main__':          # For windows thread
 
     p = setup.COVID19Parameters(s)
 
-    seeding_place = SomeGEOID
+    seeding_place = some_geo_id
     seeding_amount = [3]
     s.buildIC(seeding_places = [int(s.spatset.data[s.spatset.data['geoid'] == seeding_place].id)], 
             seeding_amount = seeding_amount)
@@ -50,8 +54,8 @@ if __name__ == '__main__':          # For windows thread
 
     results.build_comp_data()  # Long !!
 
-    nodes_to_plot = [int(s.spatset.data[s.spatset.data['geoid']== SomeGEOID].id),
-                    int(s.spatset.data[s.spatset.data['geoid']== SomeGEOID1].id)]
+    nodes_to_plot = [int(s.spatset.data[s.spatset.data['geoid']== some_geo_id].id),
+                    int(s.spatset.data[s.spatset.data['geoid']== some_geo_id1].id)]
 
 
 
