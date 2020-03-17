@@ -8,7 +8,8 @@ library(dplyr)
 #foldername = '../../data/east-coast/'
 
 # West coast
-filterUSPS = ['CA', 'OR', 'WA']
+# This will fail without a county.status dataframe, to be solved later
+filterUSPS = c('CA', 'OR', 'WA')
 foldername = '../../data/west-coast/'
 
 # MD
