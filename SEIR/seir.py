@@ -23,11 +23,13 @@ S, E, I1, I2, I3, R, cumI = np.arange(ncomp)
 
 
 def onerun_SEIR(s, p, uid):
-    r_source(s.script_npi)
-    npi = robjects.r['NPI'].T
-    p.addNPIfromR(npi)
+    if s.script_npi is not None:
+        r_source(s.script_npi)
+        npi = robjects.r['NPI'].T
+        p.addNPIfromR(npi)
 
-    r_assign('region', 'around_md')
+    # jwills fix this to not hard-code ca
+    r_assign('region', 'ca')
     r_source(s.script_import)
     importation = robjects.r['county_importations_total']
     importation = importation.pivot(index='date', columns='fips_cty', values='importations')
