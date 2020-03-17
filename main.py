@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import datetime, time, multiprocessing, itertools, sys
 import matplotlib.pyplot as plt
-from SEIR import seir, setup, results
+from COVIDScenarioPipeline.SEIR import seir, setup, results
 
 class SomeStateSpatialSetup():
     """
@@ -27,7 +27,7 @@ if __name__ == '__main__':          # For windows thread
                     interactive = False,
                     write_csv = True)
 
-    p = setup.COVID19Parameters(s.setup_name, s.nbetas)
+    p = setup.COVID19Parameters(s)
 
     seeding_place = SomeGEOID
     seeding_amount = [3]
