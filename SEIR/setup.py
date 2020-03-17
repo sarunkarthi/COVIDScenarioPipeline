@@ -25,7 +25,7 @@ class Setup():
         self.write_csv = write_csv
 
         # TODO(jwills): gotta be a better way here, right?
-        self.script_npi = None # consider 'data/NPI_Scenario1_None.R' once it's ready for the west coast
+        self.script_npi = 'data/NPI_Scenario1_None.R'
         self.script_import = 'R/distribute_airport_importations_to_counties.R'
         
         if nbetas is None:

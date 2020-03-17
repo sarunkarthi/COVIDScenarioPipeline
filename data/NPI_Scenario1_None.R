@@ -8,7 +8,8 @@ library(dplyr)
 #foldername = '../../data/east-coast/'
 
 # West coast
-# This will fail without a county.status dataframe, to be solved later
+# This will fail without a real county.status dataframe, to be solved later
+county.status <- data.frame(geoid=as.character(c("6001", "6002")))
 filterUSPS = c('CA', 'OR', 'WA')
 foldername = '../../data/west-coast/'
 
