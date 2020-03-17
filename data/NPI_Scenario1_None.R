@@ -3,13 +3,13 @@
 library(dplyr)
 
 # East Coast
-county.status <- read.csv('data/east-coast/eastcoast_April1_topAR.csv')
-filterUSPS = c('MD', 'DC', 'VA', 'DE', 'PA', 'NJ')
-foldername = '../../data/east-coast/'
+#county.status <- read.csv('data/east-coast/eastcoast_April1_topAR.csv')
+#filterUSPS = c('MD', 'DC', 'VA', 'DE', 'PA', 'NJ')
+#foldername = '../../data/east-coast/'
 
 # West coast
-#filterUSPS = ['CA', 'OR', 'WA']
-#foldername = '../../data/west-coast/'
+filterUSPS = ['CA', 'OR', 'WA']
+foldername = '../../data/west-coast/'
 
 # MD
 # county.status <- read.csv('maryland_April1_topAR.csv')
